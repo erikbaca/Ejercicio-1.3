@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio_1_3.Vistas.V_Registro">
+    <ContentPage.Content>
+        <StackLayout Margin="0"
+                     BackgroundColor="White">
+
+            <Frame
+                BackgroundColor="AliceBlue"
+                CornerRadius="0"
+                >
+
+                <Label Text="Registro de Datos"
+                   HorizontalOptions="Center"
+                   TextColor="Black"
+                       FontSize="20"
+                       />
+
+            </Frame>
+            <Label Text="Nombres"
+                   HorizontalOptions="Start"
+                   TextColor="Black"
+                       FontSize="16"
+                   Padding="10,0,0,0"
+                       />
+            <Entry Placeholder="Introduce el nombre"
+                   x:Name="txtNombre"
+                   TextColor="Black"
+                   FontSize="16"
+                   Margin="5,0,20,0"/>
+
+            <Label Text="Apellidos"
+                   HorizontalOptions="Start"
+                   TextColor="Black"
+                       FontSize="16"
+                   Padding="10,0,0,0"
+                       />
+            <Entry Placeholder="Introduce los apellidos"
+                   Keyboard="Text"
+                   x:Name="txtApellidos"
+                     TextColor="Black"
+                   FontSize="16"
+                   Margin="5,0,20,0"/>
+
+
+            <Label Text="Edad"
+                   HorizontalOptions="Start"
+                   TextColor="Black"
+                       FontSize="16"
+                   Padding="10,0,0,0"
+                       />
+            <Entry Placeholder="Introduce la Edad"
+                   x:Name="txtEdad"
+                   Keyboard="Numeric"
+                     TextColor="Black"
+                   FontSize="16"
+                   Margin="5,0,90,0"/>
+
+            <Label Text="Correo"
+                   HorizontalOptions="Start"
+                   TextColor="Black"
+                       FontSize="16"
+                   Padding="10,0,0,0"
+                       />
+            <Entry Placeholder="Introduce el Correo"
+                   Keyboard="Email"
+                   x:Name="txtCorreo"
+                     TextColor="Black"
+                   FontSize="16"
+                   Margin="5,0,20,0"/>
+
+            <Label Text="Direccion"
+                   HorizontalOptions="Start"
+                   TextColor="Black"
+                       FontSize="16"
+                   Padding="10,0,0,0"
+                       />
+            <Entry Placeholder="Introduce la Direccion"
+                   Keyboard="Text"
+                   x:Name="txtDireccion"
+                     TextColor="Black"
+                   FontSize="16"
+                   Margin="5,0,20,0"/>
+
+            <Button Text="Guardar"
+                    x:Name="btnGuardar"
+                    CornerRadius="5"
+                    HorizontalOptions="Center"
+                    BackgroundColor="Blue"
+                    TextColor="White"/>
+
+         
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

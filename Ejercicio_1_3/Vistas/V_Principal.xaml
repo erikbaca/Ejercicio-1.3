@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio_1_3.Vistas.V_Principal">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame
+                BackgroundColor="AliceBlue"
+                CornerRadius="0"
+                >
+
+                <Label Text="CONTACTOS"
+                   HorizontalOptions="Center"
+                   TextColor="Black"
+                       FontSize="20"
+                       />
+
+            </Frame>
+
+            <Label Text="Ingrese el Nombre"
+                   HorizontalTextAlignment="Start"
+                   TextColor="Black"
+                   TextTransform="None"
+                   Padding="10,0,0,0"
+                   FontSize="16"
+                       />
+
+            <Entry Placeholder="Nombre"
+                   x:Name="txtNombre"
+                   Margin="0,0,30,0"
+                   />
+            <Button x:Name="btnBuscar"
+                    VerticalOptions="Fill"
+                    CornerRadius="5"
+                    BackgroundColor="Blue"
+                    TextColor="White"
+                    Margin="60,20,60,0"
+                    Text="Buscar contacto"/>
+
+            <Button x:Name="btnRegistrar"
+                    VerticalOptions="Fill"
+                    CornerRadius="5"
+                    TextColor="White"
+                    Margin="60,0,60,0"
+                    BackgroundColor="Blue"
+                    Text="Registrar Contacto"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

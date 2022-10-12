@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio_1_3.Vistas.V_Detalle">
+    <ContentPage.Content>
+        <StackLayout Margin="0"
+                     BackgroundColor="White">
+            <Frame
+                BackgroundColor="AliceBlue"
+                CornerRadius="0"
+                >
+
+                <Label Text="Datos del Usuario"
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="Black"
+                       FontSize="20"
+                       />
+            </Frame>
+
+            <Label x:Name="lblMensaje"
+                   HorizontalOptions="Center"
+                   FontSize="16"
+                   TextColor="Black"
+                   Padding="0,0,0,0"/>
+
+            <Label Text="Nombres"
+                   HorizontalOptions="Start"
+                   TextColor="Black"
+                       FontSize="16"
+                   Padding="10,0,0,0"
+                       />
+
+            <Entry x:Name="txtNombre"
+                   Placeholder="Nombre"
+                   FontSize="16"
+                   TextColor="Black"
+                   Margin="5,0,100,0"
+                   />
+
+            <Label Text="Apellidos"
+                   HorizontalOptions="Start"
+                   TextColor="Black"
+                       FontSize="16"
+                   Padding="10,0,0,0"
+                       />
+
+            <Entry x:Name="txtApellidos"
+                   Placeholder="Apellidos"
+                   FontSize="16"
+                   TextColor="Black"
+                   Margin="5,0,100,0"/>
+
+            <Label Text="Edad"
+                   HorizontalOptions="Start"
+                   TextColor="Black"
+                       FontSize="16"
+                   Padding="10,0,0,0"
+                       />
+
+            <Entry x:Name="txtedad"
+                   Placeholder="Edad"
+                   FontSize="16"
+                   TextColor="Black"
+                   Margin="5,0,290,0"
+                   Keyboard="Numeric"
+                   />
+
+            <Label Text="Correo"
+                   HorizontalOptions="Start"
+                   TextColor="Black"
+                       FontSize="16"
+                   Padding="10,0,0,0"
+                       />
+
+            <Entry x:Name="txtcorreo"
+                   Placeholder="Correo"
+                   FontSize="16"
+                   TextColor="Black"
+                   Margin="5,0,290,0"
+                   Keyboard="Email"
+                   />
+
+            <Label Text="Direccion"
+                   HorizontalOptions="Start"
+                   TextColor="Black"
+                       FontSize="16"
+                   Padding="10,0,0,0"
+                       />
+
+            <Entry x:Name="txtdireccion"
+                   Placeholder="Direccion"
+                   FontSize="16"
+                   TextColor="Black"
+                   Margin="5,0,290,0"
+                   Keyboard="Text"
+                   />
+
+            <Button Text="Actualizar"
+                    x:Name="btn_actualizar"
+                    BackgroundColor="DarkGreen"
+                    TextColor="White"
+                    Margin="30,20,30,0"
+                    CornerRadius="6"/>
+
+            <Button Text="Eliminar"
+                    x:Name="btn_eliminar"
+                    BackgroundColor="DarkGreen"
+                    TextColor="White"
+                    Margin="30,10,30,0"
+                    CornerRadius="6"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
