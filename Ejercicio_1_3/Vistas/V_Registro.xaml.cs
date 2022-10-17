@@ -26,7 +26,7 @@ namespace Ejercicio_1_3.Vistas
 
         private void BtnGuardar_Clicked(object sender, EventArgs e)
         {
-            var DatosContacto = new personas
+            var DatosContacto = new TDatos
             {
                 Nombre = txtNombre.Text,
                 Apellidos = txtApellidos.Text,

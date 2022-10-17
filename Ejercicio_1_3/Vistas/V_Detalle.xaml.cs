@@ -16,8 +16,8 @@ namespace Ejercicio_1_3.Vistas
         public int IdSeleccionado;
         public string NomSeleccionado, ApSeleccionado, EdadSeleccionado, CorreoSeleccionado, DireccionSeleccionado;
         private SQLiteAsyncConnection conexion;
-        IEnumerable<personas> ResultadoDelete;
-        IEnumerable<personas> ResultadoUpdate;
+        IEnumerable<TDatos> ResultadoDelete;
+        IEnumerable<TDatos> ResultadoUpdate;
 
         public V_Detalle(int id, string nom, string ap, string edad, string correo, string direccion)
         {
@@ -58,13 +58,13 @@ namespace Ejercicio_1_3.Vistas
             ResultadoUpdate = Update(db, txtNombre.Text, txtApellidos.Text, txtedad.Text, txtcorreo.Text, txtdireccion.Text, IdSeleccionado);
             DisplayAlert("Confirmación", "Contacto acualizado correctamente", "OK");
         }
-        public static IEnumerable<personas> Delete(SQLiteConnection db, int id)
+        public static IEnumerable<TDatos> Delete(SQLiteConnection db, int id)
         {
-            return db.Query<personas>("Delete FROM TDatos WHERE Id = ?", id);
+            return db.Query<TDatos>("Delete FROM TDatos WHERE Id = ?", id);
         }
-        public static IEnumerable<personas> Update(SQLiteConnection db, string nombre, string apellidos, string edad, string correo, string direccion, int id)
+        public static IEnumerable<TDatos> Update(SQLiteConnection db, string nombre, string apellidos, string edad, string correo, string direccion, int id)
         {
-            return db.Query<personas>("UPDATE TDatos SET Nombre = ?, Apellidos = ?, Edad = ?, Correo=?, Direccion=?, WHERE Id =?", nombre, apellidos, edad, correo, direccion, id);
+            return db.Query<TDatos>("UPDATE TDatos SET Nombre = ?, Apellidos = ?, Edad = ?, Correo=?, Direccion=?, WHERE Id =?", nombre, apellidos, edad, correo, direccion, id);
         }
         public void Limpiar()
         {

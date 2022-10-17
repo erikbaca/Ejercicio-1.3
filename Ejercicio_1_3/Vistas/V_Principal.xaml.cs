@@ -36,8 +36,8 @@ namespace Ejercicio_1_3.Vistas
             {
                 var rutaDB = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Datos_Usuario.db3");
                 var db = new SQLiteConnection(rutaDB);
-                db.CreateTable<personas>();
-                IEnumerable<personas> resultado = SELECT_WHERE(db, txtNombre.Text);
+                db.CreateTable<TDatos>();
+                IEnumerable<TDatos> resultado = SELECT_WHERE(db, txtNombre.Text);
                 if (resultado.Count() > 0)
                 {
                     Navigation.PushAsync(new V_Consulta());
@@ -54,10 +54,10 @@ namespace Ejercicio_1_3.Vistas
             }
         }
 
-        private IEnumerable<personas> SELECT_WHERE(SQLiteConnection db, string nombre)
+        private IEnumerable<TDatos> SELECT_WHERE(SQLiteConnection db, string nombre)
         {
             /*return db.Query<T_Contacto>("SELECT * FROM T_Contacto WHERE Nombre=?", nombre);*/
-            return db.Query<personas>("SELECT * FROM TDatos WHERE Nombre =?", nombre);
+            return db.Query<TDatos>("SELECT * FROM TDatos WHERE Nombre =?", nombre);
         }
     }
 }

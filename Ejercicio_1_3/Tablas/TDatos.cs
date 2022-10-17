@@ -5,7 +5,7 @@ using SQLite;
 
 namespace Ejercicio_1_3.Tablas
 {
-   public class personas
+   public class TDatos
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

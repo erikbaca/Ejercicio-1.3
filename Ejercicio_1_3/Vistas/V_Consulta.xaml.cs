@@ -17,7 +17,7 @@ namespace Ejercicio_1_3.Vistas
     public partial class V_Consulta : ContentPage
     {
         private SQLiteAsyncConnection conexion;
-        private ObservableCollection<personas> TablaContacto;
+        private ObservableCollection<TDatos> TablaContacto;
         public V_Consulta()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace Ejercicio_1_3.Vistas
         }
         private void ListaContactos_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var Obj = (personas)e.SelectedItem;
+            var Obj = (TDatos)e.SelectedItem;
             var item = Obj.Id.ToString();
             var nom = Obj.Nombre;
             var ap = Obj.Apellidos;
@@ -46,8 +46,8 @@ namespace Ejercicio_1_3.Vistas
 
         protected async override void OnAppearing()
         {
-            var ResulRegistros = await conexion.Table<personas>().ToListAsync();
-            TablaContacto = new ObservableCollection<personas>(ResulRegistros);
+            var ResulRegistros = await conexion.Table<TDatos>().ToListAsync();
+            TablaContacto = new ObservableCollection<TDatos>(ResulRegistros);
             ListaContactos.ItemsSource = TablaContacto;
             base.OnAppearing();
         }
